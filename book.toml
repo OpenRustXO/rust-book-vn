@@ -1,0 +1,33 @@
+# Sync any changes to this *other than where explicitly specified* with the copy
+# in `nostarch/book.toml`!
+
+[book]
+title = "Ngôn ngữ lập trình Rust"
+authors = ["Tuan Em"]
+src = "src"
+language = "vi"
+
+[output.html.fold]
+enable = true
+
+[output.html]
+additional-css = ["ferris.css", "theme/2018-edition.css", "theme/semantic-notes.css", "theme/listing.css"]
+additional-js = ["ferris.js"]
+git-repository-url = "https://github.com/OpenRustXO/rust-book-vn"
+
+[output.html.search]
+use-boolean-and = true
+
+# Do not sync this preprocessor; it is for the HTML renderer only.
+[preprocessor.trpl-note]
+command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdbook-trpl-note"
+
+[preprocessor.trpl-listing]
+command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdbook-trpl-listing"
+output-mode = "default"
+
+[rust]
+edition = "2024"
+
+[build]
+extra-watch-dirs = ["packages/mdbook-trpl"]
