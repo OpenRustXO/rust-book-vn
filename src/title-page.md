@@ -1,3 +1,3 @@
-# Ngôn ngữ lập trình Rust
+# Giới thiệu
 
 Ngôn ngữ lập trình Rust bằng tiếng Việt
