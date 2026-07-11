@@ -42,8 +42,8 @@ dprint check        # kiểm tra format mà không sửa
   `.claude/skills/terminology-check/glossary.md` xem đã có cách dịch/giữ nguyên chưa; nếu chưa, bàn
   với tác giả rồi thêm vào glossary.
 - Mọi khối `` ```rust `` phải biên dịch được — xác nhận bằng `mdbook test`. Nếu chủ đích minh hoạ
-  lỗi biên dịch, đánh dấu bằng thuộc tính mdBook tương ứng (`ignore`, `does_not_compile`, ...) thay
-  vì để mdBook cố chạy nó như một ví dụ hợp lệ.
+  lỗi biên dịch, đánh dấu bằng thuộc tính mdBook tương ứng (`ignore`, `compile_fail`, ...) thay vì
+  để mdBook cố chạy nó như một ví dụ hợp lệ.
 - Mỗi mục nên ngắn gọn, đúng trọng tâm của tiêu đề; không nhồi kiến thức của chương sau vào chương
   hiện tại.
 - **Không nhắc tên hay so sánh với bất kỳ ngôn ngữ lập trình nào khác, kể cả để giải thích khái
@@ -54,6 +54,13 @@ dprint check        # kiểm tra format mà không sửa
 - Khi hướng dẫn cài đặt một công cụ, ưu tiên cách không bắt người đọc cài thêm gì khác trước đó
   (script cài đặt chính thức chạy qua `curl`/`sh` có sẵn trên macOS) hơn là cách đòi hỏi một trình
   quản lý gói trung gian như Homebrew. Không nhắc tới Homebrew trong sách.
+- Ví dụ code đụng tới filesystem thật (`File::open`, `File::create`, ...) **không được** giả định
+  file có/không tồn tại tại thời điểm test chạy — `mdbook test` chia sẻ một working directory bền
+  giữa các khối code và giữa các lần chạy `mdbook test` khác nhau (đã tận mắt thấy: một ví dụ
+  `File::create` ở khối này khiến một ví dụ `File::open` mong đợi panic ở khối khác không panic nữa
+  khi chạy lại). Dùng `no_run` cho ví dụ chỉ cần minh hoạ cú pháp (không cần chạy thật), hoặc đặt
+  tên file rõ ràng không trùng với bất kỳ ví dụ nào khác trong sách khi thực sự cần chạy và quan sát
+  hành vi thật.
 
 ## Skill trong dự án
 

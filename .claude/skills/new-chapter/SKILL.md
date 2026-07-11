@@ -68,10 +68,17 @@ cách đòi hỏi một trình quản lý gói trung gian như Homebrew. Không 
 ## 5. Xác minh trước khi coi là xong
 
 ````bash
-mdbook test    # mọi khối ```rust phải biên dịch được, trừ khi cố ý đánh dấu ignore/does_not_compile
+mdbook test    # mọi khối ```rust phải biên dịch được, trừ khi cố ý đánh dấu ignore/compile_fail
 mdbook build   # bắt lỗi link nội bộ hỏng (mục lục trỏ sai đường dẫn)
 dprint fmt     # format lại theo dprint.json (bọc dòng ở 100 ký tự)
 ````
 
 Nếu `mdbook test` báo lỗi ở một khối code không nhằm minh hoạ lỗi biên dịch, sửa code chứ đừng thêm
 `ignore` để né lỗi.
+
+Nếu chương có ví dụ đụng tới filesystem thật (`File::open`, `File::create`, ...): chạy `mdbook test`
+**ít nhất hai lần liên tiếp** trước khi coi là xong. `mdbook test` chia sẻ một working directory bền
+giữa các khối code và giữa các lần chạy khác nhau — một ví dụ tạo file ở khối này có thể âm thầm đổi
+kết quả của một ví dụ khác mong đợi file đó không tồn tại (đã xảy ra thật khi viết chương Xử lý
+lỗi). Dùng `no_run` cho ví dụ chỉ cần minh hoạ cú pháp, hoặc đặt tên file duy nhất không trùng ví dụ
+nào khác trong sách khi cần chạy thật.

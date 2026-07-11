@@ -36,10 +36,14 @@ Nếu gặp thuật ngữ chưa có trong glossary hoặc dùng khác với chư
 ## 4. Kiểm tra kỹ thuật và định dạng
 
 ````bash
-mdbook test    # mọi khối ```rust phải biên dịch được, trừ khi cố ý đánh dấu ignore/does_not_compile
+mdbook test    # mọi khối ```rust phải biên dịch được, trừ khi cố ý đánh dấu ignore/compile_fail
 mdbook build   # bắt lỗi link nội bộ hỏng
 dprint check   # xác nhận đã format đúng dprint.json, không tự sửa
 ````
+
+Nếu chương có ví dụ đụng filesystem thật (`File::open`/`File::create`/...), chạy `mdbook test` ít
+nhất hai lần liên tiếp — `mdbook test` chia sẻ working directory bền giữa các lần chạy, một ví dụ
+tạo file có thể âm thầm đổi kết quả của ví dụ khác ở lần chạy sau.
 
 ## 5. Báo cáo
 
