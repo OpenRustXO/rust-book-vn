@@ -19,17 +19,18 @@ ngữ mới hoặc quyết định lại một thuật ngữ cũ. Xem cách dùn
 
 ## Bảng thuật ngữ
 
-| Thuật ngữ (EN) | Cách dùng trong sách | Ghi chú                                                                          |
-| -------------- | -------------------- | -------------------------------------------------------------------------------- |
-| variable       | biến                 |                                                                                  |
-| function       | hàm                  |                                                                                  |
-| data type      | kiểu dữ liệu         |                                                                                  |
-| compiler       | trình biên dịch      |                                                                                  |
-| compile        | biên dịch            |                                                                                  |
-| package/crate  | _chưa quyết định_    | Rust phân biệt package và crate — cần quyết định trước khi viết chương 1 (Cargo) |
-| ownership      | _chưa quyết định_    | thuật ngữ cốt lõi, dùng xuyên suốt chương Ownership                              |
-| borrowing      | _chưa quyết định_    | liên quan chặt tới ownership, quyết định cùng lúc                                |
-| lifetime       | _chưa quyết định_    |                                                                                  |
-| trait          | giữ nguyên `trait`   | theo quy ước giữ nguyên từ khoá ngôn ngữ                                         |
-| struct         | giữ nguyên `struct`  | theo quy ước giữ nguyên từ khoá ngôn ngữ                                         |
-| enum           | giữ nguyên `enum`    | theo quy ước giữ nguyên từ khoá ngôn ngữ                                         |
+| Thuật ngữ (EN) | Cách dùng trong sách | Ghi chú                                                                        |
+| -------------- | -------------------- | ------------------------------------------------------------------------------ |
+| variable       | biến                 |                                                                                |
+| function       | hàm                  |                                                                                |
+| data type      | kiểu dữ liệu         |                                                                                |
+| compiler       | trình biên dịch      |                                                                                |
+| compile        | biên dịch            |                                                                                |
+| crate          | giữ nguyên `crate`   | theo quy ước chung — dùng ngay ở ch01-01 khi giới thiệu Cargo/cargo-binstall   |
+| package        | _chưa quyết định_    | phân biệt với crate — chưa cần dùng tới, quyết định khi thực sự phải phân biệt |
+| ownership      | _chưa quyết định_    | thuật ngữ cốt lõi, dùng xuyên suốt chương Ownership                            |
+| borrowing      | _chưa quyết định_    | liên quan chặt tới ownership, quyết định cùng lúc                              |
+| lifetime       | _chưa quyết định_    |                                                                                |
+| trait          | giữ nguyên `trait`   | theo quy ước giữ nguyên từ khoá ngôn ngữ                                       |
+| struct         | giữ nguyên `struct`  | theo quy ước giữ nguyên từ khoá ngôn ngữ                                       |
+| enum           | giữ nguyên `enum`    | theo quy ước giữ nguyên từ khoá ngôn ngữ                                       |

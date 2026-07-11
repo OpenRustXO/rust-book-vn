@@ -22,6 +22,10 @@ Với mỗi mục trong chương, xét:
 - Giải thích có đi từ bản chất/cơ chế rồi mới tới ví dụ, hay chỉ liệt kê cú pháp?
 - Có đoạn nào lan man, lặp ý đã nói, hoặc mượn khái niệm của chương sau chưa giới thiệu không?
 - Ví dụ code có tối thiểu và đúng trọng tâm của mục, hay ôm đồm nhiều khái niệm cùng lúc?
+- Có chỗ nào nhắc tên hay so sánh với ngôn ngữ lập trình khác (Python, JS, Go, ...) không? Ngoại lệ
+  duy nhất là C/C++ — mọi trường hợp khác đều phải viết lại thành giải thích thuần Rust.
+- Nếu có hướng dẫn cài đặt công cụ: có nhắc tới Homebrew hay một trình quản lý gói trung gian khác
+  không? Ưu tiên script cài đặt chính thức không yêu cầu cài thêm gì trước đó.
 
 ## 3. Kiểm tra thuật ngữ
 

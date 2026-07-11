@@ -46,6 +46,14 @@ dprint check        # kiểm tra format mà không sửa
   vì để mdBook cố chạy nó như một ví dụ hợp lệ.
 - Mỗi mục nên ngắn gọn, đúng trọng tâm của tiêu đề; không nhồi kiến thức của chương sau vào chương
   hiện tại.
+- **Không nhắc tên hay so sánh với bất kỳ ngôn ngữ lập trình nào khác, kể cả để giải thích khái
+  niệm** — không dùng kiểu "giống X trong Python/JS/Go". Ngoại lệ duy nhất là C/C++, vì đó là mốc so
+  sánh hiệu năng/mức độ kiểm soát bộ nhớ đã dùng xuyên suốt sách (xem `title-page.md`). Coi đây là
+  tài liệu Rust thuần — nêu thẳng khái niệm bằng chính ngữ cảnh của Rust, không mượn lăng kính ngôn
+  ngữ khác.
+- Khi hướng dẫn cài đặt một công cụ, ưu tiên cách không bắt người đọc cài thêm gì khác trước đó
+  (script cài đặt chính thức chạy qua `curl`/`sh` có sẵn trên macOS) hơn là cách đòi hỏi một trình
+  quản lý gói trung gian như Homebrew. Không nhắc tới Homebrew trong sách.
 
 ## Skill trong dự án
 
